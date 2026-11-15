@@ -1,0 +1,17 @@
+services:
+  employee-app:
+    build: .
+    ports:
+      - "8083:8083"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/employee_management_system
+      DB_USERNAME: root
+      DB_PASSWORD: akhil
+
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: employee_management_system
+      MYSQL_ROOT_PASSWORD: akhil
+    ports:
+      - "3306:3306"
