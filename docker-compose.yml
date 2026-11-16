@@ -1,7 +1,7 @@
 
 services:
   employee-app:
-    image: janardhan543/docker-test:latest
+    image: janardhan543/docker-test:${APP_IMAGE_TAG:-latest}
     container_name: employee-app
     ports:
       - "8083:8083"
